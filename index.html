@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineFlow Account Portal</title>
+    <style>
+    h1 {
+        text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1><strong>CineFlow Account Portal</strong></h1>
+    </header>
+
+    <main>
+      <section id="promo">
+        <h2>Promotional Video</h2>
+        <video width="640" height="360" controls poster="Thumbnail.png">
+          <source
+            src="mixkit-business-people-at-work-meeting-4809-hd-ready.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="mixkit-business-people-at-work-meeting-4809-hd-ready.webm"
+            type="video/webm"
+          />
+          Your broswer does not support the video tag
+        </video>
+      </section>
+      <br>
+
+      <section id="Tips">
+        <h2>Helpful Tips</h2>
+        <audio controls>
+          <source src="mp3-output-ttsfree(dot)com.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element
+        </audio>
+        <br>
+        <br>
+      </section>
+      <form
+        action="/submit-registration"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="John Doe"
+          pattern="[A-Za-z0-9]+"
+        />
+        <br />
+        <br />
+        <label for="password">Password</label>
+        <input
+          type="text"
+          name="password"
+          id="password"
+          minlength="8"
+          required
+          placeholder="V3ryS3cureP@ssword"
+        />
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Channel Settings</legend>
+        <label for="Email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="JohnDoe@gmail.com"
+        />
+        <br />
+        <br />
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" max="2008-02-19" required />
+        <br />
+        <br />
+        <label for="upload">Expected Weekly Upload Volume</label>
+        <input
+          type="range"
+          name="upload"
+          id="upload"
+          min="0"
+          max="10"
+          step="1"
+          value="1"
+        />
+        <br />
+        <br />
+        <label for="picture">Profile Picture</label>
+        <input
+          type="file"
+          name="picture"
+          id="picture"
+          accept=".jpg .ong"
+          required
+        />
+        <br />
+        <br />
+        <label for="genre">Content Genres:</label>
+        <input type="checkbox" name="genre" id="lifestyle" value="Lifestyle" />
+        <label for="lifestlye">Lifestyle</label>
+        <input type="checkbox" name="genre" id="tech" value="Tech" />
+        <label for="tech">Tech</label>
+        <input type="checkbox" name="genre" id="education" value="Education" />
+        <label for="education">Education</label>
+        <input type="checkbox" name="genre" id="gaming" value="Gaming" />
+        <label for="gaming">Gaming</label>
+        </fieldset>
+        <br>
+
+        <section class="form-actions">
+            <button type="submit">Register Account</button>
+            <button type="reset">Clear Form</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
